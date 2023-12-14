@@ -30,7 +30,7 @@ const Calculator = () => {
   const renderDigits = () => {
     const digits = '1234567890';
     return digits.split('').map(digit => (
-      <button key={digit} onClick={() => handleButtonClick(digit)}>
+      <button key={digit} className="digit-button" onClick={() => handleButtonClick(digit)}>
         {digit}
       </button>
     ));
@@ -39,7 +39,7 @@ const Calculator = () => {
   const renderMathOperators = () => {
     const operators = ['+', '-', '*', '/', '=', 'C'];
     return operators.map((item, i) => (
-      <button key={i} onClick={() => handleButtonClick(item)}>{item}</button>
+      <button key={i} className="button" onClick={() => handleButtonClick(item)}>{item}</button>
     ));
   };
 
